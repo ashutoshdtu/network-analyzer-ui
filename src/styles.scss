@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css?family=Iceland|Montserrat:300,400|Open+Sans:300,400|Roboto+Mono:300,400');
+@import 'themes';
+/*
+font-family: 'Iceland', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Mono', monospace;
+*/
+
+body { margin: 0; }
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+mat-row {
+    font-weight: 300;
+}

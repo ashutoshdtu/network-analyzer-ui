@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'push'">
+    <!-- [opened]="!(isHandset$ | async)"> -->
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        id="logo"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="true">
+        <!-- *ngIf="isHandset$ | async"> -->
+        <mat-icon aria-label="Side nav toggle icon" [svgIcon]="logo"></mat-icon>
+      </button>
+      <!-- <img width="50" alt="Logo" src="assets/images/network.svg"> -->
+      <span class="title">{{ title }}</span>
+      <span class="fill-remaining-space"></span>
+      <app-theme-switcher class="theme-switcher"></app-theme-switcher>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

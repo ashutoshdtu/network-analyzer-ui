@@ -1,0 +1,243 @@
+/* Tool used to generate color palettes: http://mcg.mbitson.com/
+   Base colors: $app-<colorname>.500 (see example)
+*/
+@import '~@angular/material/theming';
+
+$app-dark-blue: (
+    50 : #e5e6e7,
+    100 : #bebfc2,
+    200 : #939599,
+    300 : #686b70,
+    400 : #474b52,
+    500 : #272b33,
+    600 : #23262e,
+    700 : #1d2027,
+    800 : #171a20,
+    900 : #0e1014,
+    A100 : #599cff,
+    A200 : #267dff,
+    A400 : #0061f2,
+    A700 : #0057d9,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$app-light-green: (
+    50 : #ecfafb,
+    100 : #d1f2f5,
+    200 : #b2e9ee,
+    300 : #93e0e7,
+    400 : #7bd9e1,
+    500 : #64d2dc,
+    600 : #5ccdd8,
+    700 : #52c7d3,
+    800 : #48c1ce,
+    900 : #36b6c5,
+    A100 : #ffffff,
+    A200 : #dbfbff,
+    A400 : #a8f5ff,
+    A700 : #8ff2ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$app-light-red: (
+    50 : #fbede9,
+    100 : #f5d3c8,
+    200 : #efb5a4,
+    300 : #e8977f,
+    400 : #e38163,
+    500 : #de6b48,
+    600 : #da6341,
+    700 : #d55838,
+    800 : #d14e30,
+    900 : #c83c21,
+    A100 : #ffffff,
+    A200 : #ffd5cf,
+    A400 : #ffa99c,
+    A700 : #ff9382,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$app-light-green2: (
+    50 : #e6f6f7,
+    100 : #c0e8ec,
+    200 : #96d9df,
+    300 : #6cc9d2,
+    400 : #4dbec8,
+    500 : #2db2be,
+    600 : #28abb8,
+    700 : #22a2af,
+    800 : #1c99a7,
+    900 : #118a99,
+    A100 : #caf8ff,
+    A200 : #97f2ff,
+    A400 : #64ebff,
+    A700 : #4be8ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$app-white: (
+    50 : #ffffff,
+    100 : #ffffff,
+    200 : #ffffff,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+// Background palette for light themes.
+$app-light-theme-background: (
+  status-bar: white,
+  app-bar:    white,
+  background: white,
+  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: white,
+  selected-disabled-button: #fefefe,
+  disabled-button-toggle: white,
+  unselected-chip: white,
+  disabled-list-option: white,
+);
+
+// Background palette for dark themes.
+$app-dark-theme-background: (
+  status-bar: map_get($app-dark-blue, 900),
+  app-bar:    map_get($app-dark-blue, 700),
+  background: map_get($app-dark-blue, 500),
+  hover:      rgba(white, 0.02), // TODO(kara): check style with Material Design UX
+  card:       map_get($app-dark-blue, 600),
+  dialog:     map_get($app-dark-blue, 600),
+  disabled-button: rgba(white, 0.12),
+  raised-button: map_get($app-dark-blue, 600),
+  focused-button: map_get($app-dark-blue, 600),
+  selected-button: map_get($app-dark-blue, 700),
+  selected-disabled-button: map_get($app-dark-blue, 600),
+  disabled-button-toggle: map_get($app-dark-blue, 900),
+  unselected-chip: map_get($app-dark-blue, 400),
+  disabled-list-option: map_get($app-dark-blue, 900),
+);
+
+// Foreground palette for light themes.
+$app-light-theme-foreground: (
+  base:              black,
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $dark-disabled-text,
+  disabled-button:   rgba(black, 0.26),
+  disabled-text:     $dark-disabled-text,
+  hint-text:         $dark-disabled-text,
+  secondary-text:    $dark-secondary-text,
+  icon:              rgba(black, 0.54),
+  icons:             rgba(black, 0.54),
+  text:              rgba(black, 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+// Foreground palette for dark themes.
+$app-dark-theme-foreground: (
+  base:              white,
+  divider:           $light-dividers,
+  dividers:          $light-dividers,
+  disabled:          $light-disabled-text,
+  disabled-button:   rgba(white, 0.3),
+  disabled-text:     $light-disabled-text,
+  hint-text:         $light-disabled-text,
+  secondary-text:    $light-secondary-text,
+  icon:              white,
+  icons:             white,
+  text:              white,
+  slider-min:        white,
+  slider-off:        rgba(white, 0.3),
+  slider-off-active: rgba(white, 0.3),
+);
+

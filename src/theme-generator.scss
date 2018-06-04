@@ -1,0 +1,44 @@
+@import '~@angular/material/theming';
+@import 'palette';
+
+@function create-theme(
+    $primary, $accent, $warn, $foreground, $background, $is-dark) {
+    @return (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+      is-dark: $is-dark,
+      foreground: $foreground,
+      background: $background,
+    );
+}
+
+$app-theme-light-primary: mat-palette($app-white, 700, 300, 900);
+$app-theme-dark-primary: mat-palette($app-dark-blue, 500, 300, 700);
+$app-theme-accent: mat-palette($app-light-green2, 700, 300, 900);
+$app-theme-warn: mat-palette($app-light-red, A200);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$light-theme: create-theme(
+    $app-theme-light-primary,
+    $app-theme-accent,
+    $app-theme-warn,
+    $app-light-theme-foreground,
+    $app-light-theme-background,
+    false
+);
+
+$dark-theme: create-theme(
+    $app-theme-dark-primary,
+    $app-theme-accent,
+    $app-theme-warn,
+    $app-dark-theme-foreground,
+    $app-dark-theme-background,
+    true
+);
+
+$dark-theme2: mat-dark-theme(
+    $app-theme-dark-primary,
+    $app-theme-accent,
+    $app-theme-warn
+);
