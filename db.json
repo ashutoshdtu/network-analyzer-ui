@@ -1,0 +1,21 @@
+{
+    "posts": [{
+        "id": 1,
+        "title": "hello"
+    }],
+    "profile": {
+        "name": "typicode"
+    },
+    "sockets": [
+        {"pid": 1, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 2, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 3, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 4, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 5, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 6, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 7, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 8, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 9, "protocol": "tcp", "state": "ESTABLISHED"},
+        {"pid": 10, "protocol": "tcp", "state": "ESTABLISHED"}
+    ]
+}
